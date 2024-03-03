@@ -12,22 +12,11 @@ import {
 } from '@nextui-org/react';
 
 export default function App() {
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ];
+  const menuItems = ['About', 'Resume', 'Projects', 'Contact-Us'];
 
   return (
     <Navbar
-      disableAnimation
+      disableAnimation={true}
       isBordered
       className="fixed lg:top-5 inset-x-0 max-w-2xl mx-auto z-50 bg-gray-500 rounded-md sm:top-0"
     >
@@ -37,34 +26,37 @@ export default function App() {
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          Acemologo
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">Vishal PortFolio&apos;s</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarBrand>
-          Acemologo
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">Vishal PortFolio&apos;s</p>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
+          <Link color="foreground" href="/about">
+            About
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page" color="warning">
-            Customers
+          <Link href="/resume" aria-current="page" color="warning">
+            Resume
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="/projects">
+            Projects
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/contact-us">
+            Contact Us
           </Link>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      {/* <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -73,7 +65,7 @@ export default function App() {
             Sign Up
           </Button>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
@@ -87,7 +79,7 @@ export default function App() {
                   ? 'danger'
                   : 'foreground'
               }
-              href="#"
+              href={item.toLowerCase()}
               size="lg"
             >
               {item}

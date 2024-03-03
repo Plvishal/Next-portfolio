@@ -22,7 +22,6 @@ export default function RootLayout({
         <div></div>
 
         <Providers>
-          {' '}
           <Header />
         </Providers>
         {children}
