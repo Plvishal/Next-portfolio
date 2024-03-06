@@ -36,14 +36,16 @@ function Heroection() {
           particleColor="#fff"
         />
       </div>
-      <h1 className="text-center text-white relative z-20">
+      <h1 className="text-center text-white relative z-20 gradient_text">
         <div className="flex flex-col">
           <div>
             <p className="text-xl ">Welcome</p>
-            <h1 className="text-5xl lg:text-7xl ">I am Vishal </h1>
+            <h1 className="text-4xl lg:text-7xl  uppercase m-2 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+              I am Vishal
+            </h1>
             <p className="text-xl ">and i am</p>
           </div>
-          <div className="text-4xl lg:text-7xl">
+          <div className="text-3xl lg:text-7xl uppercase m-2 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 ">
             <span ref={el} />
           </div>
         </div>
